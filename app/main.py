@@ -32,6 +32,26 @@ async def hello(ctx):
     """Command that replies only hello."""
     await ctx.respond("Hello!")
 
+@bot.slash_command(name="list", description="Get available books")
+async def list_books(ctx):
+    """List available books."""
+    pass
+
+@bot.slash_command(name="get", description="Get book to read")
+async def get_book(ctx, book_number: str):
+    """Get book to read."""
+    pass
+
+@bot.slash_command(name="add", description="Adds new book for exchange")
+async def add_book(ctx):
+    """Add new books for exchange."""
+    pass
+
+@bot.slash_command(name="back", description="Back book to the library")
+async def back_book(ctx):
+    """Back the book to the library."""
+    pass
+
 
 def run():
     """Runs bot instance."""
