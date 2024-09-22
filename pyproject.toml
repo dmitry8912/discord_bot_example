@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "otus-discord"
+version = "0.1.0"
+description = "Discord bot example"
+authors = ["Pankrashov Dmitry <admin@dev-io.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+py-cord = "^2.6.1"
+pydantic-settings = "^2.5.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
