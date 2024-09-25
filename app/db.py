@@ -3,7 +3,6 @@ from typing import Any
 from attr import dataclass
 
 
-@dataclass
 class Book:
     name: str
     description: str
@@ -34,3 +33,9 @@ class InMemoryBooksDatabase:
         book = cls.__db.get(key, None)
         if book:
             book.holder_name = None
+
+    @classmethod
+    def my_books(cls, holder: str):
+        for name, book in cls.__db.items():
+            if book.holder_name == holder:
+                yield book
